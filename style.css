@@ -1,0 +1,10 @@
+#myBoard {
+    width: calc(100% - 20px);
+    max-width: 900px;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #606060;
+}

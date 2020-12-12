@@ -1,0 +1,24 @@
+{
+  "name": "chessfree60",
+  "version": "1.0.0",
+  "description": "A chess game",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder --windows"
+  },
+  "repository": "",
+  "keywords": [
+    "Electron"
+  ],
+  "author": "Alaeron",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^11.0.4",
+    "electron-builder": "^22.9.1"
+  },
+  "dependencies": {
+    "jquery": "^3.5.1"
+  }
+}
