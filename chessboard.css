@@ -7,12 +7,28 @@
 .board-b72b1 {
   border: 2px solid #404040;
   box-sizing: content-box;
+  display: contents;
+}
+.chessboard-63f37 {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .spare-pieces-7492f {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-flow: column;
+}
+
+.spare-pieces-top-4028b {
+  flex-flow: column;
+}
+
+.spare-pieces-bottom-ae20f {
+  flex-flow: column-reverse;
 }
 
 .square-55d63 {

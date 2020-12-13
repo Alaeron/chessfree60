@@ -873,9 +873,9 @@
     }
 
     function buildSparePiecesHTML (color) {
-      var pieces = ['wK', 'wQ', 'wR', 'wB', 'wN', 'wP']
+      var pieces = ['wK', 'wP', 'wN', 'wP', 'wR', 'wP', 'wB', 'wP', 'wQ']
       if (color === 'black') {
-        pieces = ['bK', 'bQ', 'bR', 'bB', 'bN', 'bP']
+        pieces = ['bK', 'bP', 'bN', 'bP', 'bR', 'bP', 'bB', 'bP', 'bQ']
       }
 
       var html = ''
