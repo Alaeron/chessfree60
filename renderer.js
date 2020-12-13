@@ -5,11 +5,17 @@
 // selectively enable features needed in the rendering
 // process.
 
-function onDrop(source, target, piece, newPos, oldPos, orientation) {
+function onDrop(source, target, piece, newPos, oldPos, orientation) {\
+    
     // Determine move type
     var type = "move"
     if (source == "spare") {
         type = "summon"
+    }
+
+    // Eliminate indecision
+    if (source == target) {
+        return
     }
 
     // Determine player
