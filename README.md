@@ -1,45 +1,67 @@
-# electron-quick-start
+# Chess Free60
 
-**Clone and run for a quick way to see Electron in action.**
+## Features
 
-This is a minimal Electron application based on the [Quick Start Guide](https://electronjs.org/docs/tutorial/quick-start) within the Electron documentation.
+We created this chess variant inspired by Bobby Fischer's Chess960 game (also known as Fischer random chess) to expand upon the "freestyle" play of Chess960 and create a fast-paced game that placed emphasis on creativity over formal chess education.
 
-**Use this app along with the [Electron API Demos](https://electronjs.org/#get-started) app for API code examples to help you get started.**
+## Rules
 
-A basic Electron application needs just these files:
+### Pieces:
+Each player pulls out a king, queen, rook, bishop, knight, and four pawns to start the game.
 
-- `package.json` - Points to the app's main file and lists its details and dependencies.
-- `main.js` - Starts the app and creates a browser window to render HTML. This is the app's **main process**.
-- `index.html` - A web page to render. This is the app's **renderer process**.
+### Board:
+This game is generally played on a 5x5 chessboard. You can either draw one up yourself, or place border on a standard chessboard to achieve this. 6x6 is also playable, though tends to be a longer game.
 
-You can learn more about each of these components within the [Quick Start Guide](https://electronjs.org/docs/tutorial/quick-start).
+### Objective:
+Place the enemy king in checkmate OR run the game until the opponent has no chance of winning.
 
-## To Use
+### Setup:
+The first player places their king in the back row facing the opposite side and then summons their first pawn within one square of it. This can be on the back row, or the second row. 
+The second player does the same on their side. The first player may then begin the game
 
-To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
+It is recommended that both players arrange their pieces in a "lineup" as follows:
 
-```bash
-# Clone this repository
-git clone https://github.com/electron/electron-quick-start
-# Go into the repository
-cd electron-quick-start
-# Install dependencies
-npm install
-# Run the app
-npm start
-```
+1. Pawn
+2. Power (excluding Rook)
+3. Pawn
+4. Power
+5. Pawn
+6. Power
+7. Pawn
+8. Queen
 
-Note: If you're using Linux Bash for Windows, [see this guide](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/) or use `node` from the command prompt.
 
-## Resources for Learning Electron
+This helps players keep track of which piece can be summoned next, and what is left to play.
 
-- [electronjs.org/docs](https://electronjs.org/docs) - all of Electron's documentation
-- [electronjs.org/community#boilerplates](https://electronjs.org/community#boilerplates) - sample starter apps created by the community
-- [electron/electron-quick-start](https://github.com/electron/electron-quick-start) - a very basic starter Electron app
-- [electron/simple-samples](https://github.com/electron/simple-samples) - small applications with ideas for taking them further
-- [electron/electron-api-demos](https://github.com/electron/electron-api-demos) - an Electron app that teaches you how to use Electron
-- [hokein/electron-sample-apps](https://github.com/hokein/electron-sample-apps) - small demo apps for the various Electron APIs
+### Movement:
+All pieces have standard chess moves. However, be aware that all pieces are directional (they face a direction - forward or back).
+
+### Summoning Pieces:
+When a piece that began on one side reaches the opposing back row, you may summon a new piece.
+To summon a piece, you choose the next piece from your summoning order onto the board within 1 square of your king.
+You may not summon a piece in the middle row.
+When you are out of pieces, you cannot summon any more.
+The rook may only summon two pieces in a row before another piece must summon next.
+
+### Ending the Game:
+If a player's king is in check, and they cannot move out of check then they are in checkmate and lose the game.
+If a player demonstratably has no way to summon any more pieces (ie: they only have a king left and no way to reach the opposite side) they must forfeit the game.
+
+### Order:
+King and Pawn to begin game.
+
+### Gameplay:
+1. Pawn
+2. Power (excluding Rook)
+3. Pawn
+4. Power
+5. Pawn
+6. Power
+7. Pawn
+8. Queen
+
+### Notes:
+Power pieces are the Rook, Bishop, and Knight. During normal summoning (not promotion) you only have one of each to summon. So for example if you summon the Knight first and lose your piece, you cannot recall the Knight on the second power piece summon oppertunity.
 
 ## License
-
-[CC0 1.0 (Public Domain)](LICENSE.md)
+[MIT License](LICENSE.md)

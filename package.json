@@ -5,12 +5,14 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "build": "electron-builder --windows --x64",
-    "identity" : "null"
+    "build": "electron-builder --windows --linux --x64"
   },
   "repository": "",
   "keywords": [
-    "Electron"
+    "Electron",
+    "Chess",
+    "Javascript",
+    "Board Game"
   ],
   "author": "Alaeron",
   "license": "MIT",
