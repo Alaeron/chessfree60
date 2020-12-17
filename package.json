@@ -21,6 +21,7 @@
     "electron-packager": "^15.2.0"
   },
   "dependencies": {
-    "jquery": "^3.5.1"
+    "jquery": "^3.5.1",
+    "uuid": "^8.3.2"
   }
 }

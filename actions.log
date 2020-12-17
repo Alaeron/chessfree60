@@ -1,4 +1,0 @@
-
-player,action_type,piece,captured_piece,old_position,new_position
-black,summon,bN,,spare,b5
-black,summon,bP,,spare,a5
